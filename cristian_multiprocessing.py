@@ -7,22 +7,15 @@ def str_to_datetime(x: str) -> datetime:
     return datetime.datetime.strptime(x, '%Y%m%d%H:%M:%f')
 
 
-def server_conn(conn):
-    msg = conn.recv()
+def server_process(server):
+    msg = server.recv()
     date = datetime.datetime.now()  # Cs
     date_str = date.strftime('%Y%m%d%H:%M:%f')
 
-    conn.send(date_str)
+    server.send(date_str)
 
 
-if __name__ == '__main__':
-    server, client = Pipe()
-
-    process = Process(target=server_conn,
-                      args=(server,))
-
-    process.start()
-
+def client_process(client):
     t0 = time.time()
     client.send("Message")
     server_time = client.recv()
@@ -45,4 +38,18 @@ if __name__ == '__main__':
 
     print("Client time after adjustment", Cc)
 
-    process.join()
+
+if __name__ == '__main__':
+    server, client = Pipe()
+
+    process1 = Process(target=server_process,
+                      args=(server,))
+    
+    process2 = Process(target=client_process,
+                      args=(client,))
+
+    process1.start()
+    process2.start()
+
+    process1.join()
+    process2.join()
