@@ -2,9 +2,9 @@ import socket
 import time
 import struct
 
-HOST = "127.0.0.1"
+HOST = "192.168.132.128"
 PORT = 12345
-num_clients = 3
+num_clients = 1
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as ss:
     ss.bind((HOST, PORT))
