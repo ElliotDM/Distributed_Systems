@@ -1,3 +1,11 @@
+############################# 
+# Lamport clock using 
+# sockets
+# Author: Duran Macedo Elliot
+# Date: 02-10-2024
+# #############################
+
+
 from multiprocessing import Process, Pipe
 from os import getpid
 from datetime import datetime

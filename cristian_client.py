@@ -1,3 +1,11 @@
+############################# 
+# Cristian Client using 
+# sockets
+# Author: Duran Macedo Elliot
+# Date: 24-09-2024
+# #############################
+
+
 import socket
 import time
 import datetime
@@ -7,7 +15,7 @@ def str_to_datetime(x: str) -> datetime:
     return datetime.datetime.strptime(x, '%Y%m%d%H:%M:%f')
 
 
-HOST = "localhost"
+HOST = "192.168.132.128"
 PORT = 9099
 
 

@@ -1,3 +1,11 @@
+############################# 
+# Berkeley Server using 
+# sockets
+# Author: Duran Macedo Elliot
+# Date: 27-09-2024
+# #############################
+
+
 import socket
 import time
 import struct

@@ -1,10 +1,18 @@
+############################# 
+# Berkeley Client using 
+# sockets
+# Author: Duran Macedo Elliot
+# Date: 27-09-2024
+# #############################
+
+
 import socket
 import time
 import struct
 import random
 
 
-HOST = "127.0.0.1"
+HOST = "192.168.132.128"
 PORT = 12345
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sc:

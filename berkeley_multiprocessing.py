@@ -1,3 +1,11 @@
+############################# 
+# Berkeley Algorithm using 
+# multiprocessing
+# Author: Duran Macedo Elliot
+# Date: 03-10-2024
+#############################
+
+
 from multiprocessing import Process, Pipe
 import time
 import random
