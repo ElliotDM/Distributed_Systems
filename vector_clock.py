@@ -1,6 +1,6 @@
 ############################# 
 # Vector clock using 
-# sockets
+# Pipes
 # Author: Duran Macedo Elliot
 # Date: 02-10-2024
 # #############################
